@@ -1,0 +1,36 @@
+[33mcommit de5c48cb3f2f9ed70b4ac52ee89d903ea52cc3fb[m
+Author: Hjörtur Larsen <91hjortur@gmail.com>
+Date:   Fri Feb 7 10:36:48 2014 +0000
+
+    skaufi.txt bætt við
+
+[33mcommit c902435e5b8988fd4c934d2d2eb8409b7130010a[m
+Merge: 6718f91 581b2ed
+Author: Hjörtur Larsen <91hjortur@gmail.com>
+Date:   Fri Feb 7 10:30:11 2014 +0000
+
+    Merge branch 'master' of https://github.com/gudnithor4/ThrounHugb
+
+[33mcommit 6718f919339f2c13f85c9a2f2ad627c0f9ee3ca0[m
+Author: Hjörtur Larsen <91hjortur@gmail.com>
+Date:   Fri Feb 7 10:25:13 2014 +0000
+
+    Öllum skrám bætt í safn
+
+[33mcommit 581b2eda27c989749f2092b6ba598606680a379e[m
+Author: gudni <gudnithor4@gmail.com>
+Date:   Fri Feb 7 10:22:13 2014 +0000
+
+    Well hello there
+
+[33mcommit ac1cd31d0cb0403a690cda3c9b9d0b3b4163ad04[m
+Author: Guðni Þór Björnsson <gudnithor4@gmail.com>
+Date:   Thu Feb 6 01:25:36 2014 +0000
+
+    Update LICENSE
+
+[33mcommit 451ce8d1f8688486a76016b4c9d6a0ebe6937f3f[m
+Author: Guðni Þór Björnsson <gudnithor4@gmail.com>
+Date:   Wed Feb 5 17:24:18 2014 -0800
+
+    Initial commit
