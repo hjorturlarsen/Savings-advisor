@@ -38,3 +38,5 @@ class MyFrame(wx.Frame):
 app = wx.App(False)
 frame = MyFrame()
 app.MainLoop()
+
+#Hrólfur limur
