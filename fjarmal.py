@@ -1,8 +1,6 @@
 ﻿
 # fjarmal.py
 
-##LALALALALALALALALALALALAL
-
 import wx
 import Tabs
 
