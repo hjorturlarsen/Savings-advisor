@@ -5,7 +5,7 @@ def sparnadur_a_manudi(manadarGreidsla, vextir, verdbolga):
 	return (manadarGreidsla * (vex + ver)) / 12
 
 
-def overdtryggd_Lan(hofudstoll, timabil, vextir, verdbolga):
+def manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga):
 	v = (vextir + verdbolga) / 100.0
 	heildarUpphaed = hofudstoll * math.pow((1 + v), (timabil / 12))
 	return heildarUpphaed / timabil
