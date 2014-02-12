@@ -1,5 +1,4 @@
-﻿
-# fjarmal.py
+﻿# fjarmal.py
 
 import wx
 import Tabs
