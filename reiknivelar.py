@@ -1,16 +1,7 @@
 import math
-import matplotlib.pyplot as plt
 
 def framtidarvirdi(eign, timabil, vextir):
     vaxtabrot = vextir/100.0
-    end = timabil
-    plottari = []
-    for manudur in range(0, end)
-        plottari.Append(eign*(math.pow((1+vaxtabrot), manudur)))
-
-    plt.plot(plottari)
-    plt.ylabel("ble")
-    plt.show()
     return eign*(math.pow((1 + vaxtabrot), timabil))
 
 def reglulegurspar(greidsla, timabil, vextir):
