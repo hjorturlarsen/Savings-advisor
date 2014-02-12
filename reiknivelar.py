@@ -78,7 +78,7 @@ def verdtryggt(strengur):
         return True
     else:
         return False
-        
+   
 print framtidarvirdi("sss",2.0,4)
 print framtidarvirdi(-1000,2.2,4.3)
 print framtidarvirdi(1000,-0.4,-4.3)
