@@ -19,8 +19,8 @@ class Tab1(wx.Panel):
         self.lc.InsertColumn(0, u'Nafn')
         self.lc.InsertColumn(1, u'Vextir')
         self.lc.InsertColumn(2, u'Verðtryggt')
-        self.lc.InsertColumn(3, u'Höfudstoll')
-        self.lc.InsertColumn(4, u'Lengd i mánuðum')
+        self.lc.InsertColumn(3, u'Höfuðstóll')
+        self.lc.InsertColumn(4, u'Lengd í mánuðum')
         self.lc.SetColumnWidth(0, 140)
         self.lc.SetColumnWidth(1, 130)
         self.lc.SetColumnWidth(2, 130)
@@ -41,11 +41,11 @@ class Tab1(wx.Panel):
                         (self.tc1, 0, wx.ALIGN_LEFT|wx.ALIGN_CENTER| wx.TOP, 45),
                         (wx.StaticText(pnl1, -1, u'Vextir:'),0, wx.ALIGN_CENTER| wx.TOP, 40),
                         (self.tc2,0, wx.ALIGN_LEFT|wx.ALIGN_CENTER| wx.TOP, 40),
-                        (wx.StaticText(pnl1, -1, u'Verdtryggt:'),0, wx.ALIGN_CENTER| wx.TOP, 35),
+                        (wx.StaticText(pnl1, -1, u'Verðtryggt:'),0, wx.ALIGN_CENTER| wx.TOP, 35),
                         (self.tc3, 0, wx.ALIGN_LEFT|wx.ALIGN_CENTER| wx.TOP, 35),
                         (wx.StaticText(pnl1, -1, u'Höfuðstóll:'),0, wx.ALIGN_CENTER| wx.TOP, 30),
                         (self.tc4, 0, wx.ALIGN_LEFT|wx.ALIGN_CENTER| wx.TOP, 30),
-                        (wx.StaticText(pnl1, -1, u'Lengd i mánuðum:'),0, wx.ALIGN_CENTER| wx.TOP, 25),
+                        (wx.StaticText(pnl1, -1, u'Lengd í mánuðum:'),0, wx.ALIGN_CENTER| wx.TOP, 25),
                         (self.tc5, 0, wx.ALIGN_LEFT|wx.ALIGN_CENTER| wx.TOP, 25),
                         (wx.Button(pnl1, 10, u'Bæta við'),   0, wx.ALIGN_CENTER| wx.TOP, 45),
                         (wx.Button(pnl1, 12, u'Hreinsa'), 0, wx.ALIGN_CENTER| wx.TOP, 45)])
@@ -64,7 +64,7 @@ class Tab1(wx.Panel):
         self.lc2.InsertColumn(0, u'Nafn')
         self.lc2.InsertColumn(1, u'Vextir')
         self.lc2.InsertColumn(2, u'Verðtryggt')
-        self.lc2.InsertColumn(3, u'Binding i mánuðum')
+        self.lc2.InsertColumn(3, u'Binding í mánuðum')
         self.lc2.SetColumnWidth(0, 260)
         self.lc2.SetColumnWidth(1, 100)
         self.lc2.SetColumnWidth(2, 100)
