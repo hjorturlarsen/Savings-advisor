@@ -11,29 +11,29 @@ def manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga):
 	return heildarUpphaed / timabil
 
 
-def verdtryggd_Lan(hofudstoll, timabil, vextir, verdbolga):
-
-	overdTryggt = hofudstoll / timabil
-	vex = vextir / 100.0
-	ver = verdbolga / 100.0
-	heildarVextir = (vex + ver) / 12.0
-
-	fasti = overdTryggt*heildarVextir
-	print overdTryggt
-	#print heildarVextir
-	summa = 0.0
-	x = 0
-	while x < timabil:
-		
-		total = fasti + overdTryggt
-		summa += total
-		print int(math.ceil(total))
-		overdTryggt = total
-		x += 1
-	print summa
-verdtryggd_Lan(10000000, 240, 3, 4)
-print overdtryggd_Lan(10000000, 240, 3, 4)
-print overdtryggd_Lan(10000000, 240, 3, 0)
+#def verdtryggd_Lan(hofudstoll, timabil, vextir, verdbolga):
+#
+#	overdTryggt = hofudstoll / timabil
+#	vex = vextir / 100.0
+#	ver = verdbolga / 100.0
+#	heildarVextir = (vex + ver) / 12.0
+#
+#	fasti = overdTryggt*heildarVextir
+#	print overdTryggt
+#	#print heildarVextir
+#	summa = 0.0
+#	x = 0
+#	while x < timabil:
+#		
+#		total = fasti + overdTryggt
+#		summa += total
+#		print int(math.ceil(total))
+#		overdTryggt = total
+#		x += 1
+#	print summa
+#verdtryggd_Lan(10000000, 240, 3, 4)
+#print overdtryggd_Lan(10000000, 240, 3, 4)
+#print overdtryggd_Lan(10000000, 240, 3, 0)
 
 #if(verdtryggt):
 	#verdtryggd_Lan

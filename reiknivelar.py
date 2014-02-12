@@ -78,4 +78,44 @@ def verdtryggt(strengur):
         return True
     else:
         return False
+<<<<<<< HEAD
         
+=======
+   
+print framtidarvirdi("sss",2.0,4)
+print framtidarvirdi(-1000,2.2,4.3)
+print framtidarvirdi(1000,-0.4,-4.3)
+print framtidarvirdi(1000,2,0)
+print framtidarvirdi(-1000,2,0)
+print "----------------------"
+print reglulegurspar(-1000,2,3)
+print reglulegurspar(1000.0,-2,3)
+print reglulegurspar(1000.45,2.0,-3)
+print reglulegurspar(-1000,-2,-3)
+print reglulegurspar(1000.45,2.45,3.45)
+print "----------------------"
+print sparnadar_takmark(-10000, 15000, 2, 4)
+print sparnadar_takmark(-100000, 15000, 2, 4)
+print sparnadar_takmark(10000, -15000, 2, 4)
+print sparnadar_takmark(10000, 15000, "ssdf", 4.34)
+print sparnadar_takmark(10000, 15000, -2, -4)
+print "----------------------"
+print sparnadar_timi(-100000, -1000, 4)
+print sparnadar_timi(100000, -1000, 4)
+print sparnadar_timi(-100000, 1000, 4)
+print sparnadar_timi("100000", 1000, 4)
+print sparnadar_timi(100000, 100.20, 4)
+print "----------------------"
+print sparnadur_a_manudi(1000, 3, 5)
+print sparnadur_a_manudi(1000, 3, 5)
+print sparnadur_a_manudi(1000, 3, 5)
+print sparnadur_a_manudi(1000, 3, 5)
+print sparnadur_a_manudi(1000, 3, 5)
+print "----------------------"
+print manadarlegar_greidslur_af_lani(100000, -3, 4, 4)
+print manadarlegar_greidslur_af_lani(100000, 3, -4, 4)
+print manadarlegar_greidslur_af_lani(-100000, 3, 4, 4)
+print manadarlegar_greidslur_af_lani("sdsadw", 3, -4, 4)
+print manadarlegar_greidslur_af_lani(100000, 3, 0, 0)
+print manadarlegar_greidslur_af_lani(100000, 3, -4.0, -7.3)
+>>>>>>> b32e5ec531d00223384c43f7a0b3985b96f5f797
