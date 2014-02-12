@@ -4,6 +4,7 @@ ThrounHugb
 Savings advisor
 
 Requirements:
+
 	http://matplotlib.org/
 
 	numpy, dateutil, pytz, pyparsing, six 
