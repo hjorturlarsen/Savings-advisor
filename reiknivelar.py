@@ -73,14 +73,20 @@ def manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga):
     heildarUpphaed = hofudstoll * math.pow((1 + v), (timabil / 12.0))
     return heildarUpphaed / timabil
 
+def blablalba(hofudstoll, timabil, vextir, verdbolga):
+    hofudstoll = hofudstoll - manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga)
+    return hofudstoll
+
+for i in range(240):
+   print blablalba(10000000, 240-i, 3, 4)
+
+
+
 def verdtryggt(strengur):
     if(strengur == u'Já'):
         return True
     else:
         return False
-<<<<<<< HEAD
-        
-=======
    
 print framtidarvirdi("sss",2.0,4)
 print framtidarvirdi(-1000,2.2,4.3)
@@ -118,4 +124,4 @@ print manadarlegar_greidslur_af_lani(-100000, 3, 4, 4)
 print manadarlegar_greidslur_af_lani("sdsadw", 3, -4, 4)
 print manadarlegar_greidslur_af_lani(100000, 3, 0, 0)
 print manadarlegar_greidslur_af_lani(100000, 3, -4.0, -7.3)
->>>>>>> b32e5ec531d00223384c43f7a0b3985b96f5f797
+
