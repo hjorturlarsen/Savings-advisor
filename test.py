@@ -8,14 +8,46 @@ class TestsClass(unittest.TestCase):
 
     def testOne_framtidarvirdi(self):
         self.failUnless(reiknivelar.framtidarvirdi(1000, 2, 3))
+    def testTwo_framtidarvirdi(self):
+        self.failUnless(reiknivelar.framtidarvirdi(1000, 2, 3))
+    def testThree_framtidarvirdi(self):
+        self.failUnless(reiknivelar.framtidarvirdi(1000, 2, 3))
+    def testFour_framtidarvirdi(self):
+        self.failUnless(reiknivelar.framtidarvirdi(1000, 2, 3))
+    def testFive_framtidarvirdi(self):
+        self.failUnless(reiknivelar.framtidarvirdi(1000, 2, 3))
 
     def testOne_reglulegurspar(self):
+        self.failUnless(reiknivelar.reglulegurspar(1000, 2, 3))
+    def testTwo_reglulegurspar(self):
+        self.failUnless(reiknivelar.reglulegurspar(1000, 2, 3))
+    def testThree_reglulegurspar(self):
+        self.failUnless(reiknivelar.reglulegurspar(1000, 2, 3))
+    def testFour_reglulegurspar(self):
+        self.failUnless(reiknivelar.reglulegurspar(1000, 2, 3))
+    def testFive_reglulegurspar(self):
         self.failUnless(reiknivelar.reglulegurspar(1000, 2, 3))
 
     def testOne_sparnadar_takmark(self):
         self.failUnless(reiknivelar.sparnadar_takmark(1000, 500, 2, 3))
+    def testTwo_sparnadar_takmark(self):
+        self.failUnless(reiknivelar.sparnadar_takmark(1000, 500, 2, 3))
+    def testThree_sparnadar_takmark(self):
+        self.failUnless(reiknivelar.sparnadar_takmark(1000, 500, 2, 3))
+    def testFour_sparnadar_takmark(self):
+        self.failUnless(reiknivelar.sparnadar_takmark(1000, 500, 2, 3))
+    def testFive_sparnadar_takmark(self):
+        self.failUnless(reiknivelar.sparnadar_takmark(1000, 500, 2, 3))
 
     def testOne_sparnadar_timi(self):
+        self.failUnless(reiknivelar.sparnadar_timi(1000, 50, 2))
+    def testTwo_sparnadar_timi(self):
+        self.failUnless(reiknivelar.sparnadar_timi(1000, 50, 2))
+    def testThree_sparnadar_timi(self):
+        self.failUnless(reiknivelar.sparnadar_timi(1000, 50, 2))
+    def testFour_sparnadar_timi(self):
+        self.failUnless(reiknivelar.sparnadar_timi(1000, 50, 2))
+    def testFive_sparnadar_timi(self):
         self.failUnless(reiknivelar.sparnadar_timi(1000, 50, 2))
 
 def main():
