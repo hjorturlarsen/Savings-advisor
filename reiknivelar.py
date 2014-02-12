@@ -73,12 +73,12 @@ def manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga):
     heildarUpphaed = hofudstoll * math.pow((1 + v), (timabil / 12.0))
     return heildarUpphaed / timabil
 
-def blablalba(hofudstoll, timabil, vextir, verdbolga):
+'''def blablalba(hofudstoll, timabil, vextir, verdbolga):
     hofudstoll = hofudstoll - manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga)
     return hofudstoll
 
 for i in range(240):
-   print blablalba(10000000, 240-i, 3, 4)
+   print blablalba(10000000, 240-i, 3, 4)'''
 
 
 
