@@ -6,7 +6,7 @@ def framtidarvirdi(eign, timabil, vextir):
         return
     # Ekki haegt ad hafa strengi sem input
     if(isinstance(eign, str) or isinstance(timabil, str) or isinstance(vextir, str)):
-        return
+        return  
     vaxtabrot = vextir/100.0
     return eign*(math.pow((1 + vaxtabrot), timabil))
 
@@ -64,7 +64,7 @@ def sparnadur_a_manudi(manadarGreidsla, vextir, verdbolga):
 
 #Vextir og verdbolga geta verid negative sem er snilld fyrir lantakendur 
 def manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga):
-    if(hofudstoll < 0 or timabil < 0):
+    if(hofudstoll < 0 or timabil < 0 or vextir < 0):
         return
     # Ekki haegt ad hafa strengi sem input
     if(isinstance(hofudstoll, str) or isinstance(timabil, str) or isinstance(verdbolga, str) or isinstance(vextir, str)):
