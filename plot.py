@@ -37,7 +37,7 @@ def plot_manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga):
     fig = plt.figure()
     for manudur in range(0, timabil+1):
         plotData.append(heildarUpphaed/timabil)
-        plotData2.append(heildarUpphaed/timabil - 1000h)
+        plotData2.append(heildarUpphaed/timabil - 1000)
     plt.plot(plotData)
     plt.plot(plotData2)
     plt.ylim([0,100000])
