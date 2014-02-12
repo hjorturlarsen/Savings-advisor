@@ -27,15 +27,23 @@ def plot_reglulegurspar(greidsla, timabil, vextir):
     fig.canvas.set_window_title('Reglulegur sparnaður')
     plt.show()
 
+
 def plot_manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga):
     v = (vextir + verdbolga) / 100.0
+    manadarGreidsla = 10000
     heildarUpphaed = hofudstoll * math.pow((1 + v), (timabil / 12))
     plotData = []
+    plotData2 = []
     fig = plt.figure()
     for manudur in range(0, timabil+1):
         plotData.append(heildarUpphaed/timabil)
+        plotData2.append(heildarUpphaed/timabil - 1000h)
     plt.plot(plotData)
+    plt.plot(plotData2)
+    plt.ylim([0,100000])
     plt.ylabel(u"Krónur")
     plt.xlabel(u"Mánuðir") 
     fig.canvas.set_window_title('Mánaðarlegar greiðslur af láni')
     plt.show()
+
+plot_manadarlegar_greidslur_af_lani(1000000, 25, 4, 5)
