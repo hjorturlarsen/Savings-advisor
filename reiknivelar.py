@@ -87,7 +87,12 @@ def verdtryggt(strengur):
         return True
     else:
         return False
+<<<<<<< HEAD
    
+=======
+
+
+>>>>>>> 76d351a381d58ec0ecf8172f80259953c720f628
 print framtidarvirdi("sss",2.0,4)
 print framtidarvirdi(-1000,2.2,4.3)
 print framtidarvirdi(1000,-0.4,-4.3)
@@ -123,5 +128,9 @@ print manadarlegar_greidslur_af_lani(100000, 3, -4, 4)
 print manadarlegar_greidslur_af_lani(-100000, 3, 4, 4)
 print manadarlegar_greidslur_af_lani("sdsadw", 3, -4, 4)
 print manadarlegar_greidslur_af_lani(100000, 3, 0, 0)
+<<<<<<< HEAD
 print manadarlegar_greidslur_af_lani(100000, 3, -4.0, -7.3)
 
+=======
+print manadarlegar_greidslur_af_lani(100000, 3, -4.0, -7.3)
+>>>>>>> 76d351a381d58ec0ecf8172f80259953c720f628
