@@ -45,5 +45,3 @@ def plot_manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga):
     plt.xlabel(u"Mánuðir") 
     fig.canvas.set_window_title('Mánaðarlegar greiðslur af láni')
     plt.show()
-
-plot_manadarlegar_greidslur_af_lani(1000000, 25, 4, 5)
