@@ -73,13 +73,28 @@ def manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga):
     heildarUpphaed = hofudstoll * math.pow((1 + v), (timabil / 12.0))
     return heildarUpphaed / timabil
 
-'''def blablalba(hofudstoll, timabil, vextir, verdbolga):
-    hofudstoll = hofudstoll - manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga)
-    return hofudstoll
+def hofudstols_ryrnun_an_sparnadar(hofudstoll, timabil, vextir, verdbolga):
+    stada = []
+    stada.append(hofudstoll)
+    greidsla = manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga)
+    while(hofudstoll > 1):
+        if(greidsla > hofudstoll):
+            greidsla = hofudstoll
+        hofudstoll = hofudstoll - greidsla
+            stada.append(hofudstoll)
+    return stada
 
-for i in range(240):
-   print blablalba(10000000, 240-i, 3, 4)'''
-
+def hofudstols_ryrnun_med_sparnadi(hofudstoll, timabil, vextir, verdbolga):
+    stada = []
+    stada.append(hofudstoll)
+    manadarGreidsla = 10000
+    greidsla = manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga) + sparnadur_a_manudi(manadarGreidsla, vextir, verdbolga)
+    while(hofudstoll > 1):
+        if(greidsla > hofudstoll):
+            greidsla = hofudstoll
+        hofudstoll = hofudstoll - greidsla
+            stada.append(hofudstoll)
+    return stada
 
 
 def verdtryggt(strengur):
