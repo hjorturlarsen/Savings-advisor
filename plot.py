@@ -1,6 +1,7 @@
 ﻿import math
 import matplotlib.pyplot as plt
 import numpy
+import reiknivelar
 
 def plot_framtidarvirdi(eign, timabil, vextir):
     vaxtabrot = vextir/100.0
@@ -45,3 +46,16 @@ def plot_manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga):
     plt.xlabel(u"Mánuðir") 
     fig.canvas.set_window_title('Mánaðarlegar greiðslur af láni')
     plt.show()
+
+def plot_hofudstols_ryrnun(hofudstoll, timabil, vextir, verdbolga, manadarGreidsla):
+    plotData1 = reiknivelar.hofudstols_ryrnun_an_sparnadar(hofudstoll, timabil, vextir, verdbolga)
+    plotData2 = reiknivelar.hofudstols_ryrnun_med_sparnadi(hofudstoll, timabil, vextir, verdbolga, manadarGreidsla)
+    fig = plt.figure()
+    plt.plot(plotData1)
+    plt.plot(plotData2)
+    plt.ylabel(u"Krónur")
+    plt.xlabel(u"Mánuðir")
+    fig.canvas.set_window_title("Greiðsla af láni")
+    plt.show()
+
+plot_hofudstols_ryrnun(10000000, 240, 3, 5, 10000)
