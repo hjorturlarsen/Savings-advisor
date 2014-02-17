@@ -57,5 +57,3 @@ def plot_hofudstols_ryrnun(hofudstoll, timabil, vextir, verdbolga, manadarGreids
     plt.xlabel(u"Mánuðir")
     fig.canvas.set_window_title("Greiðsla af láni")
     plt.show()
-
-plot_hofudstols_ryrnun(10000000, 240, 3, 5, 10000)
