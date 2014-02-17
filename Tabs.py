@@ -4,6 +4,7 @@ import Reikningar
 import plot
 
 lan = []
+#--- Ákveðin föst verðbólga hjá okkur!
 verdbolga = 5.804
 
 class Tab1(wx.Panel):
@@ -99,7 +100,7 @@ class Tab1(wx.Panel):
         #self.Bind (wx.EVT_BUTTON, self.OnRemove, id=11)
         self.Bind (wx.EVT_BUTTON, self.OnClear, id=12)
         self.Bind (wx.EVT_BUTTON, self.OnFind, id=13)
-        #self.Bind (wx.EVT_BUTTON, self.OnPlot, id=14)
+        self.Bind (wx.EVT_BUTTON, self.OnPlot, id=14)
         hbox.Add(vbox1, 1, wx.EXPAND)
         hbox.Add(vbox2, 1, wx.EXPAND)
         self.SetSizer(hbox)
@@ -203,9 +204,20 @@ class Tab1(wx.Panel):
         #dc = wx.MessageDialog(None, msg)
         #dc.ShowModal()
 
-        #def OnPlot(self, event):
-            #--- vantar
-
+    def OnPlot(self, event):
+        if not self.tc9.GetValue() or not self.tc10.GetValue():
+            return
+        hofudstoll = ''
+        timabil = 0
+        vextir = 0.0
+        manadargreidsla = int(self.tc6.GetValue())
+        for i in range(len(lan)):
+            if lan[i][0] == self.tc9.GetValue():
+                hofudstoll = lan[i][3]
+                timabil = lan[i][4]
+                vextir = lan[i][1]
+                     
+        plot.plot_hofudstols_ryrnun(hofudstoll, timabil, vextir, verdbolga, manadargreidsla)
 
 class Tab2(wx.Panel):
     def __init__(self, parent):
