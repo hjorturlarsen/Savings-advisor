@@ -9,7 +9,7 @@ def plot_framtidarvirdi(eign, timabil, vextir):
     fig = plt.figure()
     for manudur in range(0,timabil+1):
         plotData.append(eign*(math.pow((1+vaxtabrot), manudur)))
-    plt.plot(plotData)
+    plt.plot(plotData, linewidth=2, color='r')
     plt.ylabel(u"Krónur")
     plt.xlabel(u"Ár")
     fig.canvas.set_window_title(u'Framtíðarvirði')
@@ -22,38 +22,20 @@ def plot_reglulegurspar(greidsla, timabil, vextir):
     fig = plt.figure()
     for manudur in range(0, timabil+1):
         plotData.append((greidsla / vex)*((math.pow((1 + vex), manudur)) - 1))
-    plt.plot(plotData)
+    plt.plot(plotData,linewidth=2, color='r')
     plt.ylabel(u"Krónur")
     plt.xlabel(u"Mánuðir") 
     fig.canvas.set_window_title('Reglulegur sparnaður')
-    plt.show()
-
-
-def plot_manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga):
-    v = (vextir + verdbolga) / 100.0
-    manadarGreidsla = 10000
-    heildarUpphaed = hofudstoll * math.pow((1 + v), (timabil / 12))
-    plotData = []
-    plotData2 = []
-    fig = plt.figure()
-    for manudur in range(0, timabil+1):
-        plotData.append(heildarUpphaed/timabil)
-        plotData2.append(heildarUpphaed/timabil - 1000)
-    plt.plot(plotData)
-    plt.plot(plotData2)
-    plt.ylim([0,100000])
-    plt.ylabel(u"Krónur")
-    plt.xlabel(u"Mánuðir") 
-    fig.canvas.set_window_title('Mánaðarlegar greiðslur af láni')
     plt.show()
 
 def plot_hofudstols_ryrnun(hofudstoll, timabil, vextir, verdbolga, manadarGreidsla):
     plotData1 = reiknivelar.hofudstols_ryrnun_an_sparnadar(hofudstoll, timabil, vextir, verdbolga)
     plotData2 = reiknivelar.hofudstols_ryrnun_med_sparnadi(hofudstoll, timabil, vextir, verdbolga, manadarGreidsla)
     fig = plt.figure()
-    plt.plot(plotData1)
-    plt.plot(plotData2)
+    line1, = plt.plot(plotData1, linewidth=2, color='r')
+    line2, = plt.plot(plotData2, linewidth=2, color='b')
     plt.ylabel(u"Krónur")
     plt.xlabel(u"Mánuðir")
     fig.canvas.set_window_title("Greiðsla af láni")
+    fig.legend([line1, line2], [u'Niðugreiðsla án sparnaðar', u'Niðurgreiðsla með sparnaði'], bbox_to_anchor=[0.5, 0.95], loc='center', ncol=2)
     plt.show()
