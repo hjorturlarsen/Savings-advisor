@@ -84,17 +84,30 @@ def hofudstols_ryrnun_an_sparnadar(hofudstoll, timabil, vextir, verdbolga):
         stada.append(hofudstoll)
     return stada
 
-def hofudstols_ryrnun_med_sparnadi(hofudstoll, timabil, vextir, verdbolga, manadarGreidsla):
+def hofudstols_ryrnun_med_sparnadi(hofudstoll, timabil, vextir, verdbolga, manadarGreidsla, fjoldiManadarGreidslna):
     stada = []
     stada.append(hofudstoll)
     #breytan greidsla er manadargreidsla af lani a manudi að vidbaettri theirri upphaed
     #sem notandi er tilbuinn ad greida inn a hofudstolinn a manudi. (Vextir dregnir fra theirri upphaed)
-    greidsla = manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga) + (manadarGreidsla -sparnadur_a_manudi(manadarGreidsla, vextir, verdbolga))
-    while(hofudstoll > 1):
+    i = fjoldiManadarGreidslna
+    greidsla = manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga) + (manadarGreidsla - sparnadur_a_manudi(manadarGreidsla, vextir, verdbolga))
+    greidsla2 = manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga)
+
+    #Thegar verid er ad borga aukalega inna hofudstol
+    while(hofudstoll > 1 and i != 0):
         if(greidsla > hofudstoll):
             greidsla = hofudstoll
         hofudstoll = hofudstoll - greidsla
         stada.append(hofudstoll)
+        i--
+        
+    #Thegar ekki er verid ad greida aukalega inna hofudstol
+    while(hofudstoll > 1):
+        if(greidsla > hofudstoll):
+            greidsla = hofudstoll
+        hofudstoll = hofudstoll - greidsla2
+        stada.append(hofudstoll)
+
     return stada
 
 
