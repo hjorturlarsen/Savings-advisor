@@ -62,9 +62,9 @@ class Tab1(wx.Panel):
         
         vbox4.Add(wx.StaticText(pnl2, -1, u'Upphæð:'),0,  wx.ALIGN_CENTER| wx.TOP, 0)
         vbox4.Add(self.tc6, 0,  wx.ALIGN_CENTER| wx.TOP, 0)
-        vbox4.Add(wx.StaticText(pnl2, -1, u'Tími:'),0,  wx.ALIGN_CENTER| wx.TOP, 0)
+        vbox4.Add(wx.StaticText(pnl2, -1, u'Tími (mánuðir):'),0,  wx.ALIGN_CENTER| wx.TOP, 0)
         vbox4.Add(self.tc7, 0,  wx.ALIGN_CENTER| wx.TOP, 0)
-        vbox4.Add(wx.StaticText(pnl2, -1, u'Mesta binding:'),0,  wx.ALIGN_CENTER| wx.TOP, 0)
+        vbox4.Add(wx.StaticText(pnl2, -1, u'Mesta binding (mánuðir):'),0,  wx.ALIGN_CENTER| wx.TOP, 0)
         vbox4.Add(self.tc8, 0,  wx.ALIGN_CENTER| wx.TOP, 0)
         vbox4.Add(wx.Button(pnl2, 13, u'Finna'),   0, wx.ALIGN_CENTER| wx.TOP, 0)
         vbox4.Add(wx.StaticText(pnl2, -1, u''),0,  wx.ALIGN_CENTER| wx.TOP, 0)
@@ -207,17 +207,18 @@ class Tab1(wx.Panel):
     def OnPlot(self, event):
         if not self.tc9.GetValue() or not self.tc10.GetValue():
             return
-        hofudstoll = ''
+        hofudstoll = 0
         timabil = 0
         vextir = 0.0
         manadargreidsla = int(self.tc6.GetValue())
+        fjoldiManadarGreidslna = int(self.tc7.GetValue())
         for i in range(len(lan)):
             if lan[i][0] == self.tc9.GetValue():
                 hofudstoll = lan[i][3]
                 timabil = lan[i][4]
                 vextir = lan[i][1]
                      
-        plot.plot_hofudstols_ryrnun(hofudstoll, timabil, vextir, verdbolga, manadargreidsla)
+        plot.plot_hofudstols_ryrnun(hofudstoll, timabil, vextir, verdbolga, manadargreidsla, fjoldiManadarGreidslna)
 
 class Tab2(wx.Panel):
     def __init__(self, parent):
