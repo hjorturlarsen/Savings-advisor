@@ -63,51 +63,49 @@ def sparnadur_a_manudi(manadarGreidsla, vextir, verdbolga):
     return (manadarGreidsla * (vex + ver)) / 12
 
 #Vextir og verdbolga geta verid negative sem er snilld fyrir lantakendur 
-def manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga):
-    if(hofudstoll < 0 or timabil < 0 or vextir < 0):
+def manadarlegar_greidslur_af_lani(hofudstoll, timabil):
+    if(hofudstoll < 0 or timabil < 0):
         return
     # Ekki haegt ad hafa strengi sem input
-    if(isinstance(hofudstoll, str) or isinstance(timabil, str) or isinstance(verdbolga, str) or isinstance(vextir, str)):
+    if(isinstance(hofudstoll, str) or isinstance(timabil, str)):
         return
-    v = (vextir + verdbolga) / 100.0
-    heildarUpphaed = hofudstoll * math.pow((1 + v), (timabil / 12.0))
-    return heildarUpphaed / timabil
+        
+    return hofudstoll / timabil
 
 def hofudstols_ryrnun_an_sparnadar(hofudstoll, timabil, vextir, verdbolga):
     stada = []
     stada.append(hofudstoll)
-    greidsla = manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga)
+    v = (vextir + verdbolga) / 100.0
+    greidsla = manadarlegar_greidslur_af_lani(hofudstoll, timabil)
     while(hofudstoll > 1):
         if(greidsla > hofudstoll):
             greidsla = hofudstoll
-        hofudstoll = hofudstoll - greidsla
+        hofudstoll = hofudstoll * math.pow((1 + (v / 12.0)), (1 / 12.0)) - greidsla
         stada.append(hofudstoll)
     return stada
 
 def hofudstols_ryrnun_med_sparnadi(hofudstoll, timabil, vextir, verdbolga, manadarGreidsla, fjoldiManadarGreidslna):
     stada = []
     stada.append(hofudstoll)
-    #breytan greidsla er manadargreidsla af lani a manudi að vidbaettri theirri upphaed
+    v = (vextir + verdbolga) / 100.0
+    #breytan greidsla er manadargreidsla af lani a manudi ad vidbaettri theirri upphaed
     #sem notandi er tilbuinn ad greida inn a hofudstolinn a manudi. (Vextir dregnir fra theirri upphaed)
     i = fjoldiManadarGreidslna
-    greidsla = manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga) + (manadarGreidsla - sparnadur_a_manudi(manadarGreidsla, vextir, verdbolga))
-    greidsla2 = manadarlegar_greidslur_af_lani(hofudstoll, timabil, vextir, verdbolga)
-
-    #Thegar verid er ad borga aukalega inna hofudstol
+    greidsla = manadarlegar_greidslur_af_lani(hofudstoll, timabil) + (manadarGreidsla - sparnadur_a_manudi(manadarGreidsla, vextir, verdbolga))
+    greidsla2 = manadarlegar_greidslur_af_lani(hofudstoll, timabil)
     while(hofudstoll > 1 and i != 0):
         if(greidsla > hofudstoll):
             greidsla = hofudstoll
-        hofudstoll = hofudstoll - greidsla
+        hofudstoll = hofudstoll * math.pow((1 + (v / 12.0)), (1 / 12.0)) - greidsla
         stada.append(hofudstoll)
         i -= 1
 
-    #Thegar ekki er verid ad greida aukalega inna hofudstol
     while(hofudstoll > 1):
         if(greidsla > hofudstoll):
             greidsla = hofudstoll
-        hofudstoll = hofudstoll - greidsla2
+        hofudstoll = hofudstoll * math.pow((1 + (v / 12.0)), (1 / 12.0)) - greidsla2
         stada.append(hofudstoll)
-
+        
     return stada
 
 
