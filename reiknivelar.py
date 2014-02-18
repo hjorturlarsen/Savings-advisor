@@ -99,8 +99,8 @@ def hofudstols_ryrnun_med_sparnadi(hofudstoll, timabil, vextir, verdbolga, manad
             greidsla = hofudstoll
         hofudstoll = hofudstoll - greidsla
         stada.append(hofudstoll)
-        i--
-        
+        i -= 1
+
     #Thegar ekki er verid ad greida aukalega inna hofudstol
     while(hofudstoll > 1):
         if(greidsla > hofudstoll):
