@@ -10,9 +10,7 @@ class TestsClass(unittest.TestCase):
     def testOne_framtidarvirdi(self):
         self.failUnless(reiknivelar.framtidarvirdi(999584652, 26, 354))
     def testTwo_framtidarvirdi(self):
-        self.failUnless(reiknivelar.framtidarvirdi(10010.123, 2.124, 3223))
-    def testThree_framtidarvirdi(self):
-        self.failUnless(reiknivelar.framtidarvirdi(1000, 2314, 3.9023))
+        self.failIf(reiknivelar.framtidarvirdi(10010.123, 9999999999999, 3223))
 
     def testOne_reglulegurspar(self):
         self.failUnless(reiknivelar.reglulegurspar(10012000, 22.2, 3123))
