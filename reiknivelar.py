@@ -70,7 +70,7 @@ def manadarlegar_greidslur_af_lani(hofudstoll, timabil):
     if(isinstance(hofudstoll, str) or isinstance(timabil, str)):
         return
         
-    return hofudstoll / timabil
+    return hofudstoll / float(timabil)
 
 def hofudstols_ryrnun_an_sparnadar(hofudstoll, timabil, vextir, verdbolga):
     stada = []
