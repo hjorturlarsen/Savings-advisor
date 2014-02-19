@@ -81,8 +81,6 @@ def hofudstols_ryrnun_an_sparnadar(hofudstoll, timabil, vextir, verdbolga):
         hofudstoll = hofudstoll * math.pow((1 + (v / 12.0)), (1 / 12.0)) - greidsla
         if(hofudstoll < 0):
             hofudstoll = 0
-        if(greidsla > hofudstoll):
-            greidsla = hofudstoll
         hofudstoll = hofudstoll * math.pow((1 + (v / 12.0)), (1 / 12.0)) - greidsla
         stada.append(hofudstoll)
     return stada
@@ -100,8 +98,6 @@ def hofudstols_ryrnun_med_sparnadi(hofudstoll, timabil, vextir, verdbolga, manad
         hofudstoll = hofudstoll * math.pow((1 + (v / 12.0)), (1 / 12.0)) - greidsla
         if(hofudstoll < 0):
             hofudstoll = 0
-        if(greidsla > hofudstoll):
-            greidsla = hofudstoll
         hofudstoll = hofudstoll * math.pow((1 + (v / 12.0)), (1 / 12.0)) - greidsla
         stada.append(hofudstoll)
         i -= 1
@@ -110,8 +106,6 @@ def hofudstols_ryrnun_med_sparnadi(hofudstoll, timabil, vextir, verdbolga, manad
         hofudstoll = hofudstoll * math.pow((1 + (v / 12.0)), (1 / 12.0)) - greidsla2
         if(hofudstoll < 0):
             hofudstoll = 0
-        if(greidsla > hofudstoll):
-            greidsla = hofudstoll
         hofudstoll = hofudstoll * math.pow((1 + (v / 12.0)), (1 / 12.0)) - greidsla2
         stada.append(hofudstoll)
         
