@@ -8,44 +8,34 @@ import reiknivelar
 class TestsClass(unittest.TestCase):
 
     def testOne_framtidarvirdi(self):
-        self.failUnless(reiknivelar.framtidarvirdi(999584652, 26, 354))
+        self.failUnlessAlmostEqual(reiknivelar.framtidarvirdi(100000, 10, 12), 310584.8, places = 1)
     def testTwo_framtidarvirdi(self):
-        self.failIf(reiknivelar.framtidarvirdi(10010.123, 9999999999999, 3223))
+        self.failUnlessAlmostEqual(reiknivelar.framtidarvirdi(240000, 13, 45), 30060435.7, places = 1 )
 
     def testOne_reglulegurspar(self):
-        self.failUnless(reiknivelar.reglulegurspar(10012000, 22.2, 3123))
+        self.failUnlessAlmostEqual(reiknivelar.reglulegurspar(9500, 12, 31), 131676.81, places = 1)
     def testTwo_reglulegurspar(self):
-        self.failUnless(reiknivelar.reglulegurspar(13000, 24, 32))
-    def testThree_reglulegurspar(self):
-        self.failUnless(reiknivelar.reglulegurspar(1000, 2, 3523))
+        self.failUnlessAlmostEqual(reiknivelar.reglulegurspar(95000,24,2), 2324238.8, places = 1)
 
     def testOne_sparnadar_takmark(self):
-        self.failUnless(reiknivelar.sparnadar_takmark(99999987, 500, 24, 13))
+        self.failUnlessAlmostEqual(reiknivelar.sparnadar_takmark(100000, 2000, 24, 13), 28.0, places = 1)
     def testTwo_sparnadar_takmark(self):
-        self.failUnless(reiknivelar.sparnadar_takmark(102200, 50.20, 2.0003, 32))
-    def testThree_sparnadar_takmark(self):
-        self.failUnless(reiknivelar.sparnadar_takmark(1000, 500, 2, 3))
+        self.failUnlessAlmostEqual(reiknivelar.sparnadar_takmark(1000, 2, 23, 22), 0.0, places = 1)
 
     def testOne_sparnadar_timi(self):
-        self.failUnless(reiknivelar.sparnadar_timi(10001123, 520, 2.0234))
+        self.failUnlessAlmostEqual(reiknivelar.sparnadar_timi(100000, 520, 3), (13, 2.0), places = 1)
     def testTwo_sparnadar_timi(self):
-        self.failUnless(reiknivelar.sparnadar_timi(1099300, 50.23, 20))
-    def testThree_sparnadar_timi(self):
-        self.failUnless(reiknivelar.sparnadar_timi(91000, 50, 2000))
+        self.failUnlessAlmostEqual(reiknivelar.sparnadar_timi(100000000, 1000, 34), (23, 9.0), places = 1)
 
     def testOne_sparnadur_a_manudi(self):
-        self.failUnless(reiknivelar.sparnadar_timi(99999991000, 50, 245))
+        self.failUnlessAlmostEqual(reiknivelar.sparnadur_a_manudi(15000, 20, 3), 287.5, places = 1)
     def testTwo_sparnadur_a_manudi(self):
-        self.failUnless(reiknivelar.sparnadar_timi(1000, 50, 2))
-    def testThree_sparnadur_a_manudi(self):
-        self.failUnless(reiknivelar.sparnadar_timi(100.2340, 50.123, 2000))
+        self.failUnlessAlmostEqual(reiknivelar.sparnadur_a_manudi(152000, 2, 7), 1140.0, places = 1)
 
     def testOne_manadarlegar_greidslur_af_lani(self):
-        self.failUnless(reiknivelar.sparnadar_timi(902391000, 50, 2))
+        self.failUnlessAlmostEqual(reiknivelar.manadarlegar_greidslur_af_lani(10000000, 240), 41666.66666, places = 1)
     def testTwo_manadarlegar_greidslur_af_lani(self):
-        self.failUnless(reiknivelar.sparnadar_timi(100023, 50, 2.455432))
-    def testThree_manadarlegar_greidslur_af_lani(self):
-        self.failUnless(reiknivelar.sparnadar_timi(1000, 50, 2))
+        self.failUnlessAlmostEqual(reiknivelar.manadarlegar_greidslur_af_lani(95000000, 7000), 13571.4, places = 1)
 
 def main():
     unittest.main(verbosity = 18, exit = False)
