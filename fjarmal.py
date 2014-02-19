@@ -24,7 +24,7 @@ class MyFrame(wx.Frame):
 
     def __init__(self):
 
-        wx.Frame.__init__(self, None, wx.ID_ANY, u"Lánayfirlit", size=(1200,700))
+        wx.Frame.__init__(self, None, wx.ID_ANY, u"Lánayfirlit", size=wx.DisplaySize())
         panel = wx.Panel(self)
         notebook = MyNote(panel)
         sizer = wx.BoxSizer(wx.VERTICAL)
