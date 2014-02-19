@@ -14,8 +14,8 @@ class Tab1(wx.Panel):
         hbox  = wx.BoxSizer(wx.HORIZONTAL)
         vbox1 = wx.BoxSizer(wx.VERTICAL)
         vbox2 = wx.BoxSizer(wx.VERTICAL)
-        vbox3 = wx.GridSizer(6,2,0,0)
-        vbox4 = wx.GridSizer(6,2,0,0)
+        vbox3 = wx.GridSizer(7,2,0,0)
+        vbox4 = wx.GridSizer(7,2,0,0)
         pnl1 = wx.Panel(self, -1, style=wx.SIMPLE_BORDER)
         pnl2 = wx.Panel(self, -1, style=wx.SIMPLE_BORDER)
         self.lc = wx.ListCtrl(self, -1, style=wx.LC_REPORT)
@@ -30,6 +30,11 @@ class Tab1(wx.Panel):
         self.lc.SetColumnWidth(3, 150)
         self.lc.SetColumnWidth(4, 170)
 
+        guide = wx.StaticText(pnl1, -1, u'Skráðu inn í kerfið þitt eigið lán')
+        guide2 = wx.StaticText(pnl2, -1, u'Finndu bestu sparnaðarleiðina')
+        guide.SetFont(wx.Font(12, wx.SWISS, wx.NORMAL, wx.BOLD))
+        guide2.SetFont(wx.Font(12, wx.SWISS, wx.NORMAL, wx.BOLD))
+
         yesno = [u'Já', 'Nei']
 
         vbox1.Add(pnl1, 1, wx.EXPAND | wx.ALL, 3)
@@ -40,7 +45,10 @@ class Tab1(wx.Panel):
         self.tc3 = wx.ComboBox(pnl1, -1, size=(110,-1), choices=yesno)
         self.tc4 = wx.TextCtrl(pnl1, -1)
         self.tc5 = wx.TextCtrl(pnl1, -1)
-        vbox3.AddMany([ (wx.StaticText(pnl1, -1, u'Nafn:'),0, wx.ALIGN_CENTER| wx.TOP, 0),
+        vbox3.AddMany([
+                        (guide,0, wx.ALIGN_CENTER| wx.TOP, 0),
+                        (wx.StaticText(pnl1, -1, u''),0, wx.ALIGN_CENTER| wx.TOP, 0),
+                        (wx.StaticText(pnl1, -1, u'Nafn láns:'),0, wx.ALIGN_CENTER| wx.TOP, 0),
                         (self.tc1, 0, wx.ALIGN_LEFT|wx.ALIGN_CENTER| wx.TOP, 0),
                         (wx.StaticText(pnl1, -1, u'Vextir:'),0, wx.ALIGN_CENTER| wx.TOP, 0),
                         (self.tc2,0, wx.ALIGN_LEFT|wx.ALIGN_CENTER| wx.TOP, 0),
@@ -58,12 +66,14 @@ class Tab1(wx.Panel):
         self.tc7 = wx.TextCtrl(pnl2, -1)
         self.tc8 = wx.TextCtrl(pnl2, -1)
         self.tc9 = wx.TextCtrl(pnl2, -1, style=wx.TE_READONLY, size = (165, 25))
-        
-        vbox4.Add(wx.StaticText(pnl2, -1, u'Upphæð:'),0,  wx.ALIGN_CENTER| wx.TOP, 0)
+
+        vbox4.Add(guide2 ,0,  wx.ALIGN_CENTER| wx.TOP, 0)
+        vbox4.Add(wx.StaticText(pnl2, -1, u''),0,  wx.ALIGN_CENTER| wx.TOP, 0)
+        vbox4.Add(wx.StaticText(pnl2, -1, u'Mánaðarleg upphæð til sparnaðar:'),0,  wx.ALIGN_CENTER| wx.TOP, 0)
         vbox4.Add(self.tc6, 0,  wx.ALIGN_CENTER| wx.TOP, 0)
         vbox4.Add(wx.StaticText(pnl2, -1, u'Tími (mánuðir):'),0,  wx.ALIGN_CENTER| wx.TOP, 0)
         vbox4.Add(self.tc7, 0,  wx.ALIGN_CENTER| wx.TOP, 0)
-        vbox4.Add(wx.StaticText(pnl2, -1, u'Mesta binding (mánuðir):'),0,  wx.ALIGN_CENTER| wx.TOP, 0)
+        vbox4.Add(wx.StaticText(pnl2, -1, u'Mesta binding í banka (mánuðir):'),0,  wx.ALIGN_CENTER| wx.TOP, 0)
         vbox4.Add(self.tc8, 0,  wx.ALIGN_CENTER| wx.TOP, 0)
         vbox4.Add(wx.Button(pnl2, 13, u'Finna'),   0, wx.ALIGN_CENTER| wx.TOP, 0)
         vbox4.Add(wx.StaticText(pnl2, -1, u''),0,  wx.ALIGN_CENTER| wx.TOP, 0)
