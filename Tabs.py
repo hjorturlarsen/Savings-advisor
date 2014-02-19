@@ -193,7 +193,7 @@ class Tab1(wx.Panel):
         #dc.ShowModal()
 
     def OnPlot(self, event):
-        if not self.tc9.GetValue() or not self.tc10.GetValue():
+        if not self.tc9.GetValue():
             return
         hofudstoll = 0
         timabil = 0
