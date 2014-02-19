@@ -15,7 +15,7 @@ class Tab1(wx.Panel):
         vbox1 = wx.BoxSizer(wx.VERTICAL)
         vbox2 = wx.BoxSizer(wx.VERTICAL)
         vbox3 = wx.GridSizer(6,2,0,0)
-        vbox4 = wx.GridSizer(7,2,0,0)
+        vbox4 = wx.GridSizer(6,2,0,0)
         pnl1 = wx.Panel(self, -1, style=wx.SIMPLE_BORDER)
         pnl2 = wx.Panel(self, -1, style=wx.SIMPLE_BORDER)
         self.lc = wx.ListCtrl(self, -1, style=wx.LC_REPORT)
@@ -58,7 +58,6 @@ class Tab1(wx.Panel):
         self.tc7 = wx.TextCtrl(pnl2, -1)
         self.tc8 = wx.TextCtrl(pnl2, -1)
         self.tc9 = wx.TextCtrl(pnl2, -1, style=wx.TE_READONLY, size = (165, 25))
-        self.tc10 = wx.TextCtrl(pnl2, -1, style=wx.TE_READONLY, size = (165, 25))
         
         vbox4.Add(wx.StaticText(pnl2, -1, u'Upphæð:'),0,  wx.ALIGN_CENTER| wx.TOP, 0)
         vbox4.Add(self.tc6, 0,  wx.ALIGN_CENTER| wx.TOP, 0)
@@ -70,8 +69,6 @@ class Tab1(wx.Panel):
         vbox4.Add(wx.StaticText(pnl2, -1, u''),0,  wx.ALIGN_CENTER| wx.TOP, 0)
         vbox4.Add(wx.StaticText(pnl2, -1, u'Besta að leggja inná:'),0,  wx.ALIGN_CENTER| wx.TOP, 0)
         vbox4.Add(self.tc9, 0,  wx.ALIGN_CENTER| wx.TOP, 0)
-        vbox4.Add(wx.StaticText(pnl2, -1, u'Sparnaður á mánuði (ef lán):'),0,  wx.ALIGN_CENTER| wx.TOP, 0)
-        vbox4.Add(self.tc10, 0,  wx.ALIGN_CENTER| wx.TOP, 0)
         vbox4.Add(wx.Button(pnl2, 14, u'Myndrænt'),   0, wx.ALIGN_CENTER| wx.TOP, 0)
         
         self.lc2 = wx.ListCtrl(self, -1, style=wx.LC_REPORT)
@@ -188,17 +185,8 @@ class Tab1(wx.Panel):
                 #--- eftir upphæð innistæðu
 
                    
-        self.tc9.Clear()
-        self.tc10.Clear()
+        self.tc9.Clear() 
         self.tc9.AppendText(a)
-        if lr > 0:
-            if lan[lr - 1][2] == u'Já':
-                spar = reiknivelar.sparnadur_a_manudi(u,lan[lr - 1][1] , verdbolga)
-                spar = int(spar)
-                self.tc10.AppendText(str(spar))
-            else:
-                self.tc10.AppendText(str(reiknivelar.sparnadur_a_manudi(u, lan[lr - 1][1], 0)))
-
                 
         #msg = u'Hagstæðast er að borga inn á: "'+ a + '"'
         #dc = wx.MessageDialog(None, msg)
