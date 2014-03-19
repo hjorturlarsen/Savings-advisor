@@ -1,10 +1,8 @@
 import unittest
 import math
 
-# Here's our "unit".
 import reiknivelar
 
-# Here's our "unit tests".
 class TestsClass(unittest.TestCase):
 
     def testOne_framtidarvirdi(self):
