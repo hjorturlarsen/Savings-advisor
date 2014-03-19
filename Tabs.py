@@ -510,7 +510,3 @@ class Tab5(wx.Panel):
             man = int(man)
         self.tc4.AppendText(str(ar))
         self.tc5.AppendText(str(man))
-
-
-
-            
