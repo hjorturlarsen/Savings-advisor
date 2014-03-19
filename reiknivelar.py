@@ -89,7 +89,7 @@ def hofudstols_ryrnun_med_sparnadi(hofudstoll, timabil, vextir, verdbolga, manad
     stada.append(hofudstoll)
     v = (vextir + verdbolga) / 100.0
     #breytan greidsla er manadargreidsla af lani a manudi ad vidbaettri theirri upphaed
-    #sem notandi er tilbuinn ad greida inn a hofudstolinn a manudi. (Vextir dregnir fra theirri upphaed)
+    #sem notandi er tilbuinn ad greida inn a hofudstolinn a manudi. (Vextir dregnir fra theirri upphaed).
     i = fjoldiManadarGreidslna
     greidsla = manadarlegar_greidslur_af_lani(hofudstoll, timabil) + (manadarGreidsla - sparnadur_a_manudi(manadarGreidsla, vextir, verdbolga))
     greidsla2 = manadarlegar_greidslur_af_lani(hofudstoll, timabil)
@@ -107,7 +107,6 @@ def hofudstols_ryrnun_med_sparnadi(hofudstoll, timabil, vextir, verdbolga, manad
         stada.append(hofudstoll)
         
     return stada
-
 
 def verdtryggt(strengur):
     if(strengur == u'Já'):
